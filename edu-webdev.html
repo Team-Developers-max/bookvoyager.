@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Web Development Books - BOOKVOYAGER</title>
+    <meta name="description" content="Best books for Web Development — HTML, CSS, JavaScript, React and Node.js on BOOKVOYAGER.">
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@400;700;900&family=Cinzel:wght@400;600;700&family=Crimson+Pro:ital,wght@0,300;0,400;0,600;1,300;1,400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="genre-pages.css">
+    <link rel="stylesheet" href="education.css">
+</head>
+<body>
+    <div class="cursor" id="cursor"></div>
+    <div class="cursor-ring" id="cursor-ring"></div>
+    <nav id="navbar">
+        <div class="nav-logo">BOOKVOYAGER— <span>Beyond the Universe of Stories</span></div>
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="index.html#categories">Categories</a></li>
+            <li><a href="education.html">Education</a></li>
+            <li><a href="index.html#contact">Contact</a></li>
+        </ul>
+        <button class="nav-cta" onclick="window.location.href='index.html'">Explore Now</button>
+    </nav>
+
+    <div class="genre-page edu-subpage">
+        <a href="education.html" class="back-link">← Back to Education</a>
+        <div class="edu-sub-badge" style="--badge-color:#26c6da;">🌐 Tech Skills</div>
+        <h1 class="genre-title" style="color:#26c6da;">Web Development Books</h1>
+        <p class="edu-subpage-desc">Build stunning, powerful websites and apps with the best web development books from beginner to expert level.</p>
+
+        <div class="edu-subject-section">
+            <h2 class="edu-subject-heading" style="--subject-color:#f06292;">🏗️ Frontend</h2>
+            <div class="books-showcase">
+                <div class="book-item">
+                    <div class="book-cover-placeholder" style="background:linear-gradient(135deg,#1a0018,#880e4f);">
+                        <img src="images/webd1.webp" alt="HTML and CSS: Design and Build Websites"
+                        style="width:100%; height:100%; object-fit:cover; border-radius:8px;"></div>
+                    <div class="book-title">HTML & CSS: Design and Build Websites</div>
+                    <div class="book-author">Jon Duckett</div>
+                    <div class="book-rating">★★★★★ (4.8)</div>
+                    <div class="book-desc">Beautiful, visual introduction to HTML and CSS — perfect for beginners.</div>
+                    <a href="https://www.amazon.in/s?k=Jon+Duckett+HTML+CSS" class="buy-button" target="_blank" rel="noopener">Buy on Amazon</a>
+                </div>
+                <div class="book-item">
+                    <div class="book-cover-placeholder" style="background:linear-gradient(135deg,#16001a,#ad1457);">
+                        
+                        <img src="images/webd2.webp" alt="Javascript: The Good Parts"
+                        style="width:100%; height:100%; object-fit:cover; border-radius:8px;">
+                    </div>
+                    <div class="book-title">JavaScript: The Good Parts</div>
+                    <div class="book-author">Douglas Crockford</div>
+                    <div class="book-rating">★★★★★ (4.7)</div>
+                    <div class="book-desc">Distilled wisdom of JavaScript — the must-read JS classic for developers.</div>
+                    <a href="https://www.amazon.in/s?k=JavaScript+Good+Parts+Crockford" class="buy-button" target="_blank" rel="noopener">Buy on Amazon</a>
+                </div>
+                <div class="book-item">
+                    <div class="book-cover-placeholder" style="background:linear-gradient(135deg,#120014,#c2185b);">
+                        <img src="images/webd3.webp" alt="Eloquent JavaScript"
+                        style="width:100%; height:100%; object-fit:cover; border-radius:8px;"></div>
+                    <div class="book-title">Eloquent JavaScript</div>
+                    <div class="book-author">Marijn Haverbeke</div>
+                    <div class="book-rating">★★★★★ (4.8)</div>
+                    <div class="book-desc">Modern introduction to programming and JS — free online + print edition.</div>
+                    <a href="https://www.amazon.in/s?k=Eloquent+JavaScript+Haverbeke" class="buy-button" target="_blank" rel="noopener">Buy on Amazon</a>
+                </div>
+                <div class="book-item">
+                    <div class="book-cover-placeholder" style="background:linear-gradient(135deg,#0e0016,#d81b60);">
+                        <img src="images/webd4.webp" alt="Learning React"
+                        style="width:100%; height:100%; object-fit:cover; border-radius:8px;"></div>
+                    <div class="book-title">Learning React</div>
+                    <div class="book-author">Alex Banks & Eve Porcello</div>
+                    <div class="book-rating">★★★★☆ (4.5)</div>
+                    <div class="book-desc">Functional programming approach to building React applications — O'Reilly.</div>
+                    <a href="https://www.amazon.in/s?k=Learning+React+Alex+Banks+Eve+Porcello" class="buy-button" target="_blank" rel="noopener">Buy on Amazon</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="edu-subject-section">
+            <h2 class="edu-subject-heading" style="--subject-color:#80cbc4;">⚙️ Backend & Full Stack</h2>
+            <div class="books-showcase">
+                <div class="book-item">
+                    <div class="book-cover-placeholder" style="background:linear-gradient(135deg,#001a18,#004d40);">
+                        <img src="images/webd5.webp" alt="Nodde.js Design Patterns"
+                        style="width:100%; height:100%; object-fit:cover; border-radius:8px;"></div>
+                    <div class="book-title">Node.js Design Patterns</div>
+                    <div class="book-author">Mario Casciaro & Luciano Mammino</div>
+                    <div class="book-rating">★★★★★ (4.7)</div>
+                    <div class="book-desc">Deep dive into Node.js patterns, streams, and scalable architecture.</div>
+                    <a href="https://www.amazon.in/s?k=Node.js+Design+Patterns+Casciaro" class="buy-button" target="_blank" rel="noopener">Buy on Amazon</a>
+                </div>
+                <div class="book-item">
+                    <div class="book-cover-placeholder" style="background:linear-gradient(135deg,#001614,#00695c);">
+                        <img src="images/webd6.webp" alt="Full Stack Development"
+                        style="width:100%; height:100%; object-fit:cover; border-radius:8px;"></div>
+                    <div class="book-title">Full Stack JavaScript Development</div>
+                    <div class="book-author">Colin J. Ihrig & Adam Bretz</div>
+                    <div class="book-rating">★★★★☆ (4.4)</div>
+                    <div class="book-desc">End-to-end JavaScript development with Node, Express, and modern tooling.</div>
+                    <a href="https://www.amazon.in/s?k=Full+Stack+JavaScript+Development" class="buy-button" target="_blank" rel="noopener">Buy on Amazon</a>
+                </div>
+                <div class="book-item">
+                    <div class="book-cover-placeholder" style="background:linear-gradient(135deg,#001210,#00796b);">
+                        <img src="images/webd7.webp" alt="Web Development with Node & Express"
+                        style="width:100%; height:100%; object-fit:cover; border-radius:8px;"></div>
+                    <div class="book-title">Web Development with Node & Express</div>
+                    <div class="book-author">Ethan Brown</div>
+                    <div class="book-rating">★★★★☆ (4.5)</div>
+                    <div class="book-desc">Practical guide to building web apps with Node.js and Express framework.</div>
+                    <a href="https://www.amazon.in/s?k=Web+Development+Node+Express+Ethan+Brown" class="buy-button" target="_blank" rel="noopener">Buy on Amazon</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <div class="footer-logo">BOOKVOYAGER—</div>
+        <p class="footer-text">✦ Beyond the Universe of Stories · Est. 2025 ✦</p>
+        <ul class="footer-links">
+            <li><a href="#">Privacy</a></li>
+            <li><a href="#">Terms</a></li>
+            <li><a href="#">Sitemap</a></li>
+        </ul>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

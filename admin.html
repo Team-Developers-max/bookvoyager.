@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Admin</title>
+  <style>html,body{height:100%;margin:0;font-family:system-ui,Segoe UI,Roboto,Arial;background:#000;color:#fff;display:flex;align-items:center;justify-content:center}#msg{font-size:1.1rem;text-align:center;padding:1rem 2rem;border:1px solid rgba(255,255,255,0.08);border-radius:8px}</style>
+</head>
+<body>
+  <div id="msg">Authorizing...</div>
+  <script>
+    (function(){
+      // NOTE: client-side protection only. Change ADMIN_PASS as needed.
+      const ADMIN_PASS = 'admin123';
+      const stored = sessionStorage.getItem('isAdmin') === 'true';
+      function deny(){ alert('Access denied'); location.href='index.html'; }
+      if(stored){ document.getElementById('msg').textContent = 'Admin area — Authorized personnel only.'; return; }
+      const p = prompt('Enter admin password:');
+      if(p === ADMIN_PASS){ sessionStorage.setItem('isAdmin','true'); document.getElementById('msg').textContent = 'Admin area — Authorized personnel only.'; }
+      else deny();
+    })();
+  </script>
+</body>
+</html>

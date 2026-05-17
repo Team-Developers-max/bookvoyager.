@@ -1,0 +1,275 @@
+/* ===========================
+   EDUCATION.CSS — BookVoyager Educational Section
+   =========================== */
+
+/* ---- EDU HERO ---- */
+.edu-hero {
+    padding: 7rem 5vw 3rem;
+    text-align: center;
+    position: relative;
+}
+
+.edu-hero-badge {
+    display: inline-block;
+    font-family: 'Cinzel', serif;
+    font-size: 0.85rem;
+    letter-spacing: 0.2em;
+    color: var(--gold);
+    border: 1px solid rgba(212,175,55,0.35);
+    padding: 0.5rem 1.5rem;
+    border-radius: 50px;
+    margin-bottom: 1.5rem;
+    background: rgba(212,175,55,0.06);
+    text-transform: uppercase;
+}
+
+.edu-hero-title {
+    font-family: 'Cinzel Decorative', serif;
+    font-size: clamp(2.5rem, 7vw, 5.5rem);
+    font-weight: 900;
+    color: var(--text-primary);
+    line-height: 1.1;
+    margin-bottom: 1.5rem;
+    text-shadow: 0 0 60px rgba(212,175,55,0.2);
+}
+
+.edu-gold {
+    background: linear-gradient(135deg, var(--gold), var(--gold-light));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.edu-hero-desc {
+    max-width: 680px;
+    margin: 0 auto 3.5rem;
+    font-family: 'Crimson Pro', serif;
+    font-size: 1.2rem;
+    color: rgba(232,234,246,0.6);
+    line-height: 1.8;
+}
+
+/* ---- EDU GRID SECTION ---- */
+.edu-grid-section {
+    padding: 0 5vw 6rem;
+}
+
+.edu-cards-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 1.5rem;
+    max-width: 1300px;
+    margin: 0 auto;
+}
+
+/* ---- EDU CARD ---- */
+.edu-card {
+    position: relative;
+    display: flex;
+    align-items: center;
+    gap: 1.2rem;
+    padding: 1.8rem 1.5rem;
+    border-radius: 16px;
+    border: 1px solid rgba(255,255,255,0.07);
+    background: rgba(10,8,20,0.7);
+    backdrop-filter: blur(12px);
+    text-decoration: none;
+    overflow: hidden;
+    transition: transform 0.35s cubic-bezier(0.23,1,0.32,1),
+                border-color 0.35s ease, box-shadow 0.35s ease;
+    cursor: pointer;
+}
+
+.edu-card:hover {
+    transform: translateY(-6px) scale(1.02);
+    border-color: rgba(212,175,55,0.4);
+    box-shadow: 0 20px 50px rgba(0,0,0,0.5);
+}
+
+.edu-card-glow {
+    position: absolute;
+    inset: 0;
+    opacity: 0;
+    transition: opacity 0.4s ease;
+    pointer-events: none;
+    border-radius: 16px;
+}
+
+.edu-card:hover .edu-card-glow { opacity: 1; }
+
+/* Per-card accent colors */
+.edu-card-jee        { --card-accent: #f39c12; }
+.edu-card-eng        { --card-accent: #00bcd4; }
+.edu-card-board      { --card-accent: #ab47bc; }
+.edu-card-higher     { --card-accent: #ffb300; }
+.edu-card-web        { --card-accent: #26c6da; }
+.edu-card-cpp        { --card-accent: #42a5f5; }
+.edu-card-dsa        { --card-accent: #7c4dff; }
+.edu-card-python     { --card-accent: #66bb6a; }
+
+.edu-card-jee .edu-card-glow    { background: radial-gradient(circle at 30% 50%, rgba(243,156,18,0.12), transparent 70%); }
+.edu-card-eng .edu-card-glow    { background: radial-gradient(circle at 30% 50%, rgba(0,188,212,0.12), transparent 70%); }
+.edu-card-board .edu-card-glow  { background: radial-gradient(circle at 30% 50%, rgba(171,71,188,0.12), transparent 70%); }
+.edu-card-higher .edu-card-glow { background: radial-gradient(circle at 30% 50%, rgba(255,179,0,0.12), transparent 70%); }
+.edu-card-web .edu-card-glow    { background: radial-gradient(circle at 30% 50%, rgba(38,198,218,0.12), transparent 70%); }
+.edu-card-cpp .edu-card-glow    { background: radial-gradient(circle at 30% 50%, rgba(66,165,245,0.12), transparent 70%); }
+.edu-card-dsa .edu-card-glow    { background: radial-gradient(circle at 30% 50%, rgba(124,77,255,0.12), transparent 70%); }
+.edu-card-python .edu-card-glow { background: radial-gradient(circle at 30% 50%, rgba(102,187,106,0.12), transparent 70%); }
+
+.edu-card-icon {
+    font-size: 2.8rem;
+    min-width: 60px;
+    text-align: center;
+    filter: drop-shadow(0 0 12px var(--card-accent, #fff));
+    transition: transform 0.35s ease, filter 0.35s ease;
+}
+
+.edu-card:hover .edu-card-icon {
+    transform: scale(1.15) rotate(-5deg);
+    filter: drop-shadow(0 0 20px var(--card-accent, #fff));
+}
+
+.edu-card-content {
+    flex: 1;
+}
+
+.edu-card-label {
+    font-family: 'Cinzel', serif;
+    font-size: 0.65rem;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--card-accent, var(--gold));
+    margin-bottom: 0.3rem;
+    opacity: 0.8;
+}
+
+.edu-card-name {
+    font-family: 'Cinzel', serif;
+    font-size: 1.15rem;
+    font-weight: 700;
+    color: var(--text-primary);
+    margin-bottom: 0.25rem;
+    line-height: 1.3;
+}
+
+.edu-card-sub {
+    font-size: 0.78rem;
+    color: rgba(232,234,246,0.4);
+    font-family: 'Crimson Pro', serif;
+    margin-bottom: 0.5rem;
+    line-height: 1.5;
+}
+
+.edu-card-count {
+    font-family: 'Cinzel', serif;
+    font-size: 0.7rem;
+    color: var(--card-accent, var(--gold));
+    letter-spacing: 0.1em;
+}
+
+.edu-card-arrow {
+    font-size: 1.4rem;
+    color: var(--card-accent, var(--gold));
+    opacity: 0.4;
+    transition: opacity 0.3s ease, transform 0.3s ease;
+    min-width: 24px;
+}
+
+.edu-card:hover .edu-card-arrow {
+    opacity: 1;
+    transform: translateX(4px);
+}
+
+/* ---- EDU SUB PAGE ---- */
+.edu-subpage {
+    padding-top: 6rem;
+}
+
+.edu-sub-badge {
+    display: inline-block;
+    font-family: 'Cinzel', serif;
+    font-size: 0.75rem;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--badge-color, var(--gold));
+    border: 1px solid rgba(255,255,255,0.12);
+    padding: 0.4rem 1.2rem;
+    border-radius: 30px;
+    margin-bottom: 1rem;
+    background: rgba(255,255,255,0.04);
+}
+
+.edu-subpage-desc {
+    font-family: 'Crimson Pro', serif;
+    font-size: 1.15rem;
+    color: rgba(232,234,246,0.55);
+    max-width: 700px;
+    line-height: 1.8;
+    margin: 0.5rem 0 3rem;
+}
+
+/* ---- EDU SUBJECT SECTIONS ---- */
+.edu-subject-section {
+    margin-bottom: 4rem;
+}
+
+.edu-subject-heading {
+    font-family: 'Cinzel', serif;
+    font-size: 1.3rem;
+    font-weight: 600;
+    color: var(--subject-color, var(--gold));
+    margin-bottom: 1.5rem;
+    padding-bottom: 0.75rem;
+    border-bottom: 1px solid rgba(255,255,255,0.07);
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+/* ---- BOOK COVER PLACEHOLDER (for no-image pages) ---- */
+.book-cover-placeholder {
+    width: 140px;
+    height: 200px;
+    min-width: 140px;
+    border-radius: 6px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 3rem;
+    box-shadow: 0 8px 30px rgba(0,0,0,0.4),
+                inset 0 1px 0 rgba(255,255,255,0.1);
+    margin-bottom: 0;
+}
+
+/* ---- INDEX EDU SECTION STYLES ---- */
+.edu-index-section {
+    padding: 4rem 5vw 6rem;
+    border-top: 1px solid rgba(255,255,255,0.06);
+}
+
+/* ---- RESPONSIVE ---- */
+@media (max-width: 768px) {
+    .edu-cards-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .edu-hero-title {
+        font-size: 2.5rem;
+    }
+
+    .edu-card-icon {
+        font-size: 2rem;
+        min-width: 44px;
+    }
+
+    .edu-card-name {
+        font-size: 1rem;
+    }
+
+    .book-cover-placeholder {
+        width: 100px;
+        height: 140px;
+        min-width: 100px;
+        font-size: 2.2rem;
+    }
+}
